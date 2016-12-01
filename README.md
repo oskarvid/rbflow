@@ -16,7 +16,7 @@ First of all, run
 ```
 sudo docker images
 ```
-and copy the image ID of your "oskarv/rbflow" image, open "startFromDocker.sh" with a text editor and paste it into "IMAGEID=" at the top of the file.  
+and copy the image ID of your "oskarv/rbflow" image, open startFromDocker.sh with a text editor and paste it into "IMAGEID=" at the top of the file.  
 
 Scroll down and change the file paths at "# Paths" to point to your reference files and the rbflow folder.
 
@@ -35,6 +35,7 @@ To start the pipeline, go to the terminal, change your working directory to the 
 sh startFromDocker.sh
 ```
 
-
+### Cleaning the folder between runs  
+If you run the clean.sh script, you will delete everything that gets created during an analysis.  
 
 
