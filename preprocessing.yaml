@@ -19,10 +19,10 @@ workflow_steps:
   depend_from: ""
   step_options:
     bwa_bin: "bwa"
-    core: 30
+    core: 4
     input_dir: "Samples"
     input_name: "*"
-    input_extension: "fastq"
+    input_extension: "fastq.gz"
     input_R1_tag: "R1"
     input_R2_tag: "R2"
     output_dir: "01_mapping_bwa"
@@ -57,7 +57,7 @@ workflow_steps:
     picard2_command: "SortSam"
   command_line_options:
     java:
-      - "-Xmx60G"
+      - "-Xmx6G"
       - "-Djava.io.tmpdir=./TMP"
     picard2:
       - "CREATE_INDEX=true"
@@ -80,7 +80,7 @@ workflow_steps:
     picard2_command: "MarkDuplicates"
   command_line_options:
     java:
-      - "-Xmx60G"
+      - "-Xmx6G"
       - "-Djava.io.tmpdir=./TMP"
     picard2:
       - "METRICS_FILE=samples.metrics"
@@ -95,7 +95,7 @@ workflow_steps:
   depend_from: ["picard_mark_duplicate"]
   result: "true"
   step_options:
-    core: 18
+    core: 4
     input_dir: "03_markdup"
     input_files: "*.bam"
     output_dir: "04_gatk_recal"
@@ -105,16 +105,20 @@ workflow_steps:
     ref_path: "/References/human_g1k_v37_decoy.fasta"
   command_line_options:
     java:
-      - "-Xmx60G"
+      - "-Xmx6G"
       - "-Djava.io.tmpdir=./TMP"
     gatk:
       - " --phone_home NO_ET --gatk_key /Jar/Fournous.Ghislain_rr-research.no.key "
     gatk_recal:
       - " -knownSites /References/1000G_phase1.indels.b37.vcf "
       - " -knownSites /References/Mills_and_1000G_gold_standard.indels.b37.vcf "
-      - " -knownSites /References/dbsnp_138.b37.vcf "
+      - " -knownSites /References/dbsnp.vcf "
 #      - " -L     /Data/intervals/b37_NKTCL_variants.intervals"
       - " -cov ContextCovariate "
       - " -cov CycleCovariate "
     gatk_PrintReads:
       - ""
+
+
+
+
