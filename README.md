@@ -2,7 +2,7 @@
 
 ### How to set up and run the pipeline  
 The startFromDocker.sh script assumes that a certain folder structure is in place, and it is recommended that you use the same folder structure unless you want to edit the script manually to suit your own preferences.  
-The simplest way to get started is to clone this repository, change the file paths as described below, place yor samples in the "Samples" folder, install Docker and then you're good to go!  
+The simplest way to get started is to clone this repository, change the file paths as described below, install Docker and then you're good to go!  
 
 To install Docker you can follow the appropriate instructions on Dockers website for instructions: https://docs.docker.com/engine/installation/
 
