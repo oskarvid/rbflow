@@ -8,7 +8,7 @@ To install Docker you can follow the appropriate instructions on Dockers website
 
 To install the rbFlow Docker image, run 
 ```
-sudo docker pull oskarv/rbflow:20161130
+sudo docker pull oskarv/rbflow:20161208
 ```
 
 Before we run the docker image, we need to configure the startFromDocker.sh script.  

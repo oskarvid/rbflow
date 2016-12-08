@@ -1,7 +1,7 @@
 #Container ID
 
 #1) Build with multithreading enabled
-IMAGE_ID="04ef533c9b90"
+IMAGE_ID="bb1f8fdea20b"
 
 #User ID (Choose one of CUST_USERID definition)
 USERID=`id -u`
@@ -11,7 +11,7 @@ CUST_USERID="-u=$USERID:$GROUPID"
 
 # Paths
 REFERENCE="/path/to/reference/files"
-DATA="/change/this/to/the/folder/that/contains/the/"Samples"/folder"
+DATA="/path/to/the/folder/that/contains/the/"Samples"/folder"
 
 #Not used:
 #CUST_ENV="-e HOME=/tmp"
