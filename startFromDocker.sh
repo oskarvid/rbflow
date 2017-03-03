@@ -1,7 +1,7 @@
 #Container ID
 
 #1) Build with multithreading enabled
-IMAGE_ID="bb1f8fdea20b"
+IMAGE_ID="oskarv/rbflow"
 
 #User ID (Choose one of CUST_USERID definition)
 USERID=`id -u`
