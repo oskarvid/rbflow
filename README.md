@@ -51,7 +51,6 @@ You can also download it using the graphical user interface if you prefer that, 
 If you do not have access to NeLS you can use the official Broad Institute ftp site to download the reference files. Keep in mind that we cannot guarantee that the files from Broad Institute are identical to the ones we use, but there shouldn't be any difference. Use [this link](ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/) to access their ftp, you will be met by a login window, but just click "ok" because there's no password required.  
 You're going to need to download these files manually:  
 <details>
-Some of the files in the list below have shorter names than the ones in the ftp directory, just choose the one that fits best, there's no risk of confusion.  
 1000G_phase1.indels.b37.vcf  
 1000G_phase1.indels.b37.vcf.idx  
 1000g.vcf - This file is not available at their ftp site, you're going to need to find it some place else, it should be 6.9GB.  
