@@ -8,7 +8,7 @@ To install Docker you can follow the appropriate instructions on Dockers website
 
 To install the rbFlow Docker image, run 
 ```
-sudo docker pull oskarv/rbflow:20161208
+sudo docker pull oskarv/rbflow:latest
 ```
 
 Before we run the docker image, we need to configure the startFromDocker.sh script.  
@@ -57,8 +57,8 @@ You're going to need to download these files manually:
 1000g.vcf.idx  
 dbsnp_138.b37.vcf  
 dbsnp_138.b37.vcf.idx  
-hapmap_3.3.b37.vcf.gz  
-hapmap_3.3.b37.vcf.gzidx  
+hapmap_3.3.b37.vcf  
+hapmap_3.3.b37.vcf.idx  
 human_g1k_v37_decoy.dict  
 human_g1k_v37_decoy.fasta  
 human_g1k_v37_decoy.fasta.amb  
