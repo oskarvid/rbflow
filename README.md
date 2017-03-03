@@ -38,4 +38,38 @@ sh startFromDocker.sh
 ### Cleaning the folder between runs  
 If you run the clean.sh script, you will delete everything that gets created during an analysis.  
 
+### Instructions for downloading the reference files for this pipeline
+If you are part of a Norwegian university you have access to the NeLS portal, which is where we store the official reference files for this pipeline. If you have never used scp to download files from NeLS, watch [this tutorial](https://www.youtube.com/watch?v=TbUl8iuIwIw) for a guided walkthrough for how to download files from NeLS.  
+Once you have your ssh private key file, you can copy and paste the code below, edit it and put in your NeLS username that you got in the tutorial. The NeLS file path should be the same as the one in the code below, but you need to edit the destination file path by changing "/your/destination" to your actual folder where the reference files will be located.
 
+```
+scp -r -i yourNeLSusername@nelstor0.cbu.uib.no.txt yourNeLSusername@nelstor0.cbu.uib.no:Projects/NCS-PM_Elixir_collaboration/Germline-varcall-wf-reference-files-v2.8/ /your/destination/
+```
+
+You can also download it using the graphical user interface if you prefer that, in that case you log in to NeLS and navigate to the "/Projects/NCS-PM_Elixir_collaboration" folder and click the zip file icon to download the entire folder as a zip file.
+
+If you do not have access to NeLS you can use the official Broad Institute ftp site to download the reference files. Keep in mind that we cannot guarantee that the files from Broad Institute are identical to the ones we use, but there shouldn't be any difference. Use [this link](ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/) to access their ftp, you will be met by a login window, but just click "ok" because there's no password required.  
+You're going to need to download these files manually:  
+<details>
+Some of the files in the list below have shorter names than the ones in the ftp directory, just choose the one that fits best, there's no risk of confusion.  
+1000G_phase1.indels.b37.vcf  
+1000G_phase1.indels.b37.vcf.idx  
+1000g.vcf - This file is not available at their ftp site, you're going to need to find it some place else, it should be 6.9GB.  
+1000g.vcf.idx  
+dbsnp_138.b37.vcf  
+dbsnp_138.b37.vcf.idx  
+hapmap_3.3.b37.vcf.gz  
+hapmap_3.3.b37.vcf.gzidx  
+human_g1k_v37_decoy.dict  
+human_g1k_v37_decoy.fasta  
+human_g1k_v37_decoy.fasta.amb  
+human_g1k_v37_decoy.fasta.ann  
+human_g1k_v37_decoy.fasta.bwt  
+human_g1k_v37_decoy.fasta.fai  
+human_g1k_v37_decoy.fasta.pac  
+human_g1k_v37_decoy.fasta.sa  
+Mills_and_1000G_gold_standard.indels.b37.vcf  
+Mills_and_1000G_gold_standard.indels.b37.vcf.idx  
+omni.vcf - This file is not available at their ftp site, you're going to need to find it some place else, it should be 193 MB.  
+omni.vcf.idx  
+</details>
